@@ -1,0 +1,16 @@
+import time
+
+while True:
+    s = 0
+    m = 0
+    h = 0
+    time_user = int(input())
+    for i in range(time_user):
+        time.sleep(1)
+        s += 1
+        if s % 60 == 0:
+            m += 1
+        if s % 3600 == 0:
+            h += 1
+        print("Прошло", s, "секунд", m, "минут", h, "часов")
+    print("Время окончено")
