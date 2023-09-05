@@ -1,0 +1,29 @@
+from tkinter import *
+
+
+window = Tk()
+window.title('tic-tac-toe')
+window.geometry('432x433')
+window.resizable(False, False)
+
+
+def b1(event):
+    print("Левая кнопка мыши")
+ 
+ 
+def b3(event):
+    print("Правая кнопка мыши")
+
+def enter_leave(event):
+    print('Внутри кнопки')
+
+
+b = Button(window, bg='black', width=10, height=2)
+b.grid(row=0, column=0)
+
+b.bind('<Button-1>', b1)
+b.bind('<Button-3>', b3)
+b.bind('<Enter>', enter_leave)
+
+window.mainloop()
+
